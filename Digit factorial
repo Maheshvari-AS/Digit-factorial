@@ -1,0 +1,10 @@
+import math
+n = int(input())
+ans = 0
+
+for num in range(10, n):
+    s = [math.factorial(int(i)) for i in " ".join(str(num)).split()]
+    if sum(s) % num == 0:
+        ans += num
+
+print(ans)
